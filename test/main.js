@@ -6,7 +6,7 @@ should();
 
 const { JSDOM } = jsdom;
 
-const url = 'https://al3xback.github.io/fmentor-article-preview-mocha/';
+const url = 'https://al3xback.github.io/fmentor-article-preview-mocha-chai-should/';
 
 const getData = () => {
 	return got(url)
