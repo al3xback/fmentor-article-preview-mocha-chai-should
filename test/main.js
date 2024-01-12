@@ -32,8 +32,8 @@ describe('DOM', () => {
 
 	it('should have a number type of card image width and height attribute values', () => {
 		const cardImageEl = document.querySelector('.card__image img');
-		const cardImageWidth = cardImageEl.width;
-		const cardImageHeight = cardImageEl.height;
+		const cardImageWidth = parseInt(cardImageEl.getAttribute('width'));
+		const cardImageHeight = parseInt(cardImageEl.getAttribute('height'));
 
 		cardImageWidth.should.be.a('number');
 		cardImageHeight.should.be.a('number');
@@ -54,7 +54,8 @@ describe('DOM', () => {
 	});
 
 	it('should have an empty alt attribute value of card image element', () => {
-		const cardImageAlt = document.querySelector('.card__image img').alt;
+		const cardImageEl = document.querySelector('.card__image img');
+		const cardImageAlt = cardImageEl.getAttribute('alt');
 
 		cardImageAlt.should.be.empty;
 	});
